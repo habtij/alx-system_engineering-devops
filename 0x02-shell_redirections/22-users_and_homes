@@ -1,2 +1,2 @@
 #!/bin/bash
-cat /etc/passwd | sort $USERS
+cat /etc/passwd | sort
