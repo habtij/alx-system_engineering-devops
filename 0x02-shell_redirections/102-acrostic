@@ -1,0 +1,2 @@
+#!bin/bash
+echo ${line:0:1}
