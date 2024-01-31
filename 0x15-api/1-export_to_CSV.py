@@ -30,4 +30,4 @@ if __name__ == "__main__":
 
         for todo in todos:
             output.writerow(
-                [user_id, username, todos.get("completed"), todo.get("title")])
+                [user_id, username, todo.get("completed"), todo.get("title")])
