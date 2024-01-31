@@ -23,11 +23,11 @@ if __name__ == "__main__":
     params = {"userId": user_id}
     todos_resp = requests.get(url + "todos", params=params)
 
-    todos = todos_resp.json
+    todos = todos_resp.json()
 
     with open("{}.csv".format(user_id), "w", newline="") as csvfile:
-        output = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
+        writer = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
 
         for todo in todos:
-            output.writerow(
+            writer.writerow(
                 [user_id, username, todo.get("completed"), todo.get("title")])
