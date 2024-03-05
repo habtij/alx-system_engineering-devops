@@ -11,7 +11,7 @@ def top_ten(subreddit):
     headers = {"User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"}
     params = {"limit": 10}
     resp = requests.get(
-            url, headers=headers, params=params, allow_redirect=False
+            url, headers=headers, params=params, allow_redirects=False
             )
 
     if resp.status_code == 404:
