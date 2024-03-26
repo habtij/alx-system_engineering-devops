@@ -1,5 +1,5 @@
 # Fix bad "phpp" extensions to "php" in Wordpress settings file
-exec {'fix-wordpress':
-  command => 'sed -i s/.phpp/php/g /var/www/html/wp-settings.php',
-  path    => '/usr/local/bin//:/bin/'
+exec {'fix type in filename':
+  command => 'sudo sed -i "s/.phpp/.php/" /var/www/html/wp-settings.php',
+  provider=> shell,
 }
