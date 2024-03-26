@@ -12,7 +12,7 @@ def number_of_subscribers(subreddit):
     if response.status_code != 200:
         return 0
 
-    results = response.json()['data']
+    data = response.json()['data']
     pages = data['children']
     page_data = pages[0]['data']
     return page_data['subreddit_subscribers']
