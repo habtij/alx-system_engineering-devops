@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Query Reddit API and returns a list containing the titles of all hot articles
+    Query Reddit API and return a list containing the titles of all hot article
 """
 
 import requests
